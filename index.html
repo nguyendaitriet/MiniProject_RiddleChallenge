@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Challenge</title>
+    <link rel="icon" href="images/web-icon2.png">
+    <link rel="stylesheet" href="css/minigame.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-title">
+            <h2>Ready to be riddled?</h2>
+        </div>
+        <div class="container-content ">
+            <div class="left-block centerAlign">
+                <div class="left-size outline-timer">
+                    <p id="countdown">00:00</p>
+                    <button id="startgame" onclick="startGame(300)"
+                        class="w3-button w3-black w3-hover-aqua">Start</button>
+                    <button id="resetgame" onclick="confirmResetGame()"
+                        class="w3-button w3-black w3-hover-red">Reset</button>
+                </div>
+                <div class="left-size-timeover">
+                    <p id="timeOver" hidden></p>
+                </div>
+                <div class="left-size outline-score">
+                    <h2>Your Score</h3>
+                        <h1 id="score">0</h1>
+                </div>
+            </div>
+            <div class="mainArea">
+                <fieldset id="answerArea" disabled class="answerArea">
+                    <h1 id="quesTitle">Rule</h1>
+                    <div>
+                        <p id="challenge"></p><br>
+                        <ul id="rule"></ul>
+                    </div>
+                    <div class="inputArea">
+                        <input type="text" id="typetext" placeholder="-Type your answer here-" autocomplete="off"
+                            hidden>
+                        <button id="done" onclick="showNextQuestion()" class="w3-button w3-purple w3-hover-purple"
+                            hidden>Check</button>
+                        <button class="fa-solid fa-lightbulb fa-solid-hover" style="visibility: collapse;" id="hint"
+                            onclick="showHints()" title="Show hint"></button>
+                        <span id="result"></span>
+                    </div>
+                    <br>
+                    <div id="congratsMessage" class="w3-panel w3-pale-green w3-topbar w3-bottombar w3-border-amber-green" style="float: left;" hidden>
+                        <h2>abc</h2>
+                        <p>abc</p>
+                    </div>
+                    <div id="encourageMessage" class="w3-panel w3-pale-red w3-topbar w3-bottombar w3-border-amber-red" style="float: left;" hidden>
+                        <h2>abc</h2>
+                        <p>abc</p>
+                    </div>
+                    <fieldset id="hintArea" hidden>
+                        <p id="hint1"></p><br>
+                        <p id="hint2"></p><br>
+                        <p id="hint3"></p>
+                    </fieldset>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/minigame.js"></script>
+    <script>
+        //Use "Enter" button on keyboard to check answer instead of clicking "Check"
+        window.addEventListener("keydown", (event) => {
+            if (event.keyCode == 13 && document.querySelector("#answerArea").disabled == false) {
+                showNextQuestion();
+            }
+        });
+    </script>
+</body>
+
+</html>

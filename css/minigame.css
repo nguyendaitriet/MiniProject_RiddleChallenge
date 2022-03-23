@@ -240,8 +240,9 @@ em {
 }
 #encourageMessage>h2, #congratsMessage>h2 {
     margin: 10px 0px 5px 20px;
+    font-size: xx-large;
 }
 #encourageMessage>p, #congratsMessage>p {
     margin: 10px 10px 5px 20px;
-    font-size: large;
+    font-size: x-large;
 }

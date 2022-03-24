@@ -2,7 +2,7 @@
 ## Game link: 
 https://nguyendaitriet.github.io/MiniProject_RiddleChallenge/
 ## Introduction:
-### - Game genre: #### solving riddle game.
+### - Game genre: __ solving riddle game.
 ### - Purposes of creating this mini game:
 * Creating a personal practical program after finishing Module 1.
 * Using and combinding knowledges about HTML, CSS and JavaScript.

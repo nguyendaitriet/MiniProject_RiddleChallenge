@@ -18,7 +18,7 @@
 * Box Model
 * Animation
 ### 3. JavaScript:
-Conditional statement
+* Conditional statement
 * Arrays
 * Functions
 * Objects

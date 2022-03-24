@@ -1,7 +1,6 @@
 # Mini Game Project: Riddle Challenge
 
-## Game link: 
-https://nguyendaitriet.github.io/MiniProject_RiddleChallenge/
+## Game link: https://nguyendaitriet.github.io/MiniProject_RiddleChallenge/
 
 ## Introduction:
 ### Game genre: solving riddle game.

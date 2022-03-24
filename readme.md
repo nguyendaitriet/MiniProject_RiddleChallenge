@@ -9,5 +9,14 @@ https://nguyendaitriet.github.io/MiniProject_RiddleChallenge/
 * Creating a game that helps to unwind with some fun teasers or test for smartness.
 * Improving some English skills.
 ## Knowledge used:
-   ### HTML
+   ### 1. HTML elements.
+   ### 2. CSS:
+   * Color
+   * Font
+   * Pseudo Class
+   * Box Model
+   * Animation
+
+   ### 3. JavaScript
+   ### 4. Git
 

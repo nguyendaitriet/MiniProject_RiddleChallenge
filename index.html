@@ -17,7 +17,22 @@
 
     <div class="container">
         <div class="container-title">
-            <h2>Ready to be riddled?</h2>
+            <div style="width:90%">
+                <h2>Ready to be riddled?</h2>
+                <div class="dropdown" style="float: right"> 
+                    <i class="fa-solid fa-sun" id="setting"></i> 
+                    <span style="color:black">Setting</span> 
+                    <div class="dropdown-content" hidden>
+                        <ul>
+                            <li>Set time
+                                <input type="number" min='0' max="59" value="5" oninput="preventGettingNegativeValue(this)"> :
+                                <input type="number" min='0' max="59" value="0" oninput="preventGettingNegativeValue(this)">
+                            </li>
+                            <li>Language</li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
         </div>
         <div class="container-content ">
             <div class="left-block centerAlign">
@@ -53,11 +68,14 @@
                         <span id="result"></span>
                     </div>
                     <br>
-                    <div id="congratsMessage" class="w3-panel w3-pale-green w3-topbar w3-bottombar w3-border-amber-green" style="float: left;" hidden>
+                    <div id="congratsMessage"
+                        class="w3-panel w3-pale-green w3-topbar w3-bottombar w3-border-amber-green" style="float: left;"
+                        hidden>
                         <h2></h2>
                         <p></p>
                     </div>
-                    <div id="encourageMessage" class="w3-panel w3-pale-red w3-topbar w3-bottombar w3-border-amber-red" style="float: left;" hidden>
+                    <div id="encourageMessage" class="w3-panel w3-pale-red w3-topbar w3-bottombar w3-border-amber-red"
+                        style="float: left;" hidden>
                         <h2></h2>
                         <p></p>
                     </div>

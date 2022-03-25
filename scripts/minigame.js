@@ -140,7 +140,16 @@ function endGame(countdown0, endStatus) {
     getHintArea.hidden = true;
 }
 //Start the countdown timer and playing game with first riddle
-function callCountdownTimer(totalsecond) {
+let settingButton = document.querySelector(".dropdown");
+let timeInput = document.querySelector(".dropdown-content");
+function getTimeSet() {
+    let minute = timeInput.children[0].children[0].children[0].valueAsNumber;
+    let second = timeInput.children[0].children[0].children[1].valueAsNumber;
+    return minute*60 + second;
+}
+
+function callCountdownTimer() {
+    let totalsecond = getTimeSet();
     let countdown0 = setInterval(() => {
         let minute = Math.floor(totalsecond / 60);
         let second = totalsecond % 60;
@@ -169,6 +178,7 @@ function callCountdownTimer(totalsecond) {
 function enableGamePlay() {
     getAnswerArea.removeAttribute("disabled");
     startGameButton.disabled = true;
+    settingButton.hidden = true;
 }
 function showFirstQuestion() {
     let random = Math.floor(Math.random() * totalQues);
@@ -278,6 +288,7 @@ function resetGame() {
     getTypeText.hidden = true;
     checkButton.hidden = true;
     stopStatus.hidden = true;
+    settingButton.hidden = false;
     reset = true;
     if (getAnswerArea.disabled == true) {
         reset = false;
@@ -314,3 +325,17 @@ var rules = `
 localStorage.setItem("RulesData", rules);
 let showRule = document.querySelector("#rule");
 showRule.innerHTML = localStorage.getItem("RulesData");
+
+//Dropdown processing
+function preventGettingNegativeValue(element) {
+    element.value = !!element.value && Math.abs(element.value) >= 0 && element.value <60 ? Math.abs(element.value) : null;
+}
+settingButton.addEventListener("click", () => {
+    timeInput.hidden = false;
+})
+settingButton.addEventListener("mouseout", () => {
+    timeInput.hidden = true;
+})
+timeInput.addEventListener("mouseover", () => {
+    timeInput.hidden = false;
+})

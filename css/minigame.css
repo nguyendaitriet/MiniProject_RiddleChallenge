@@ -233,10 +233,11 @@ em {
     border-color: #b40000!important;
 }
 
-#congratsMessage {
-    height: 25%;
-    width: 75%;
+#congratsMessage, #encourageMessage {
+    height: fit-content;
+    width: content;
     padding: 0px 10px;
+    float: left;
 }
 #encourageMessage>h2, #congratsMessage>h2 {
     margin: 10px 0px 5px 20px;

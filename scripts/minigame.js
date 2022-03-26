@@ -125,8 +125,8 @@ let selectHint3 = document.querySelector("#hint3");
 
 
 //Click "Start" button to run the game
-function startGame(totalsecond) {
-    callCountdownTimer(totalsecond);
+function startGame() {
+    callCountdownTimer();
     enableGamePlay();
     showFirstQuestion();
 }
